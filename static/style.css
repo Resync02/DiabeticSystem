@@ -1,0 +1,155 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY + BACKGROUND IMAGE */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    /* GANTI bg.jpg dengan gambar kamu */
+    background: url("/static/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CONTAINER UTAMA */
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+
+    /* Form tetap fokus */
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* HEADING */
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* SMALL TEXT */
+small {
+    display: block;
+    margin-bottom: 6px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* DROPDOWN */
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+
+    background-color: #ffffff;
+    color: #333;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* DROPDOWN FOCUS */
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* INPUT NUMBER */
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+/* SUBMIT BUTTON */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* RESULT SECTION */
+.results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background-color: #e9f5ff;
+    border: 1px solid #cce4ff;
+    border-radius: 5px;
+
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* LINK */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

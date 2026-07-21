@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi Diabetes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Hasil Prediksi Risiko Diabetes</h2>
+
+    <div class="results">
+
+        <p>
+            <strong>Algoritma:</strong>
+            {{ results["Algorithm"] }}
+        </p>
+
+        <p>
+            <strong>Hasil Prediksi:</strong>
+            <span style="color:
+                {% if results['Prediction'] == 'Diabetic' %}
+                    red
+                {% else %}
+                    green
+                {% endif %}
+            ">
+                {{ results["Prediction"] }}
+            </span>
+        </p>
+
+        <p>
+            <strong>Probabilitas Risiko:</strong>
+            {{ results["Probability"] }}%
+        </p>
+
+        <hr>
+
+        <h3>Interpretasi</h3>
+        {% if results["Prediction"] == "Diabetic" %}
+            <p style="color: red;">
+                Pasien memiliki risiko tinggi terkena diabetes.
+                Disarankan untuk melakukan pemeriksaan medis lanjutan
+                serta menerapkan pola hidup sehat.
+            </p>
+        {% else %}
+            <p style="color: green;">
+                Pasien memiliki risiko rendah terkena diabetes.
+                Tetap pertahankan pola makan sehat dan aktivitas fisik teratur.
+            </p>
+        {% endif %}
+
+        <a href="/" class="btn-back">Kembali ke Form Input</a>
+
+    </div>
+</div>
+
+</body>
+</html>

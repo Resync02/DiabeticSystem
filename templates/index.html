@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Diabetes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Form Input Data Pasien</h2>
+    <form action="/predict" method="post">
+
+        <label>Glucose (mg/dL):</label>
+        <small>Normal: 70–99 | Prediabetes: 100–125 | Diabetes ≥126</small><br>
+        <input type="number" name="Glucose" required>
+
+        <label>Blood Pressure (mmHg):</label>
+        <small>Normal: 90/60 – 120/80 (masukkan nilai systolic, contoh: 120)</small><br>
+        <input type="number" name="BloodPressure" required>
+
+        <label>BMI (kg/m²):</label>
+        <small>Normal: 18.5–24.9 | Overweight: 25–29.9 | Obese ≥30</small><br>
+        <input type="number" step="0.1" name="BMI" required>
+
+        <label>Insulin (µU/ml):</label>
+        <small>Normal fasting: 2–25 µU/mL</small><br>
+        <input type="number" name="Insulin" required>
+
+        <label>Age (years):</label>
+        <input type="number" name="Age" required>
+
+        <label>Diabetes Pedigree Function:</label>
+        <small>Kisaran umum: 0.0–2.5</small><br>
+        <input type="number" step="0.001" name="DiabetesPedigreeFunction" required>
+
+        <label>Waist Circumference (cm):</label>
+        <small>Normal Pria ≤90 cm | Normal Wanita ≤80 cm</small><br>
+        <input type="number" name="Waist" required>
+
+        <label>Physical Activity Level (1-5):</label>
+        <small>
+            1 = Sangat rendah | 2 = Rendah |
+            3 = Sedang | 4 = Tinggi | 5 = Sangat tinggi
+        </small><br>
+        <input type="number" name="Activity" min="1" max="5" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</div>
+</body>
+</html>
